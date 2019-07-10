@@ -10,7 +10,7 @@ jobs:
           command: |
                 sudo apt-get update
                 sudo apt-get install texlive-xetex pandoc
-                sudo pip install python3-notebook jupyter jupyter-core python-ipykernel  
+                sudo pip install jupyter
       - run:
           name: compile PDFs 
           command: jupyter nbconvert --to html --output-dir='pdf' *.ipynb
