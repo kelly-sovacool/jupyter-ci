@@ -1,12 +1,12 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: debian:stretch
-
+    machine: 
+      pre:
+        - sudo apt-get install texlive-xetex
+        - sudo apt-get install python3-notebook jupyter jupyter-core python-ipykernel  
     steps:
       - checkout
-
       - run:
           name: compile PDFs 
           command: jupyter nbconvert --to html --output-dir='pdf' *.ipynb
