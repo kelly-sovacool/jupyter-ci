@@ -8,9 +8,6 @@ jobs:
       - checkout
 
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: compile PDFs 
+          command: jupyter nbconvert --to html --output-dir='pdf' *.ipynb
 
-      - run:
-          name: Print the Current Time
-          command: date
