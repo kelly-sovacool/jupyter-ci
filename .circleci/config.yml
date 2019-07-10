@@ -9,7 +9,7 @@ jobs:
           name: install dependencies
           command: |
                 sudo apt-get install texlive-xetex pandoc
-                sudo apt-get install python3-notebook jupyter jupyter-core python-ipykernel  
+                sudo pip install python3-notebook jupyter jupyter-core python-ipykernel  
       - run:
           name: compile PDFs 
           command: jupyter nbconvert --to html --output-dir='pdf' *.ipynb
