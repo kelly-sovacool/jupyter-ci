@@ -1,1 +1,1 @@
-# jupyter-ci
+# jupyter-ci-mwe
