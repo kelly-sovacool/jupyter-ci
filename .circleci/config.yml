@@ -13,8 +13,11 @@ jobs:
                 sudo pip install jupyter
       - run:
           name: compile PDFs 
-          command: jupyter nbconvert --to pdf --output-dir='pdf' *.ipynb
-      - store_artifacts:
-          path: pdf/
-          destination: pdf
+          command: |
+              jupyter nbconvert --to pdf --output-dir='pdf' *.ipynb
+              git config user.email "kellysovacool@gmail.com"
+              git config user.name "Kelly Sovacool"
+              git add pdf
+              git commit -m "Compile PDFs [ci skip]"
+              git push
 
