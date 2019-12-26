@@ -25,8 +25,3 @@ jobs:
     - name: Compile PDFs
       run: |
         jupyter nbconvert --to pdf --output-dir='pdf' *.ipynb
-        git config user.email "kellysovacool@gmail.com"
-        git config user.name "Kelly Sovacool"
-        git add pdf
-        git commit -m "Compile PDFs [ci skip]"
-        git push
